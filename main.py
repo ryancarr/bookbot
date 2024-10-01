@@ -26,7 +26,9 @@ def count_characters(text: str, symbols: bool =True) -> dict[str, int]:
     """
     output = {}
     
-    for letter in text.lower():
+    text = text.lower()
+
+    for letter in text:
         # If we are excluding symbols and the current letter is not in the alphabet skip
         # current letter
         if not symbols and not letter.isalpha():
